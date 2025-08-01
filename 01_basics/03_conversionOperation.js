@@ -65,3 +65,38 @@ let someNumber = 33
 let stringNumber = String(someNumber)
 console.log(stringNumber);
 console.log(typeof(stringNumber));
+
+//********************** Operations ********************** 
+
+let value = 3
+let negValue = -value
+console.log(negValue)   // output ==> -3
+
+console.log(2+2)
+console.log(2-2)
+console.log(2*2)
+console.log(2**3)   //2 to the power 3
+console.log(2/2)
+console.log(2%2)
+
+
+str1 = "hello"
+str2 = " sanika"
+str3 = str1 + str2
+console.log(str3)
+
+console.log("1" + 2)    // o/p ==> 12
+console.log(1 + "2")    // o/p ==> 12
+console.log("1" + 2 + 2)    // o/p ==> 122
+console.log(1 + 2 + "2")    // o/p ==> 32
+
+console.log((2 + 3) * 5 % 2)
+
+console.log(true)   // output ==> true
+console.log(+true)  // output ==> 1 (tricky conversion but not a good practice)
+console.log(+false)  // output ==> 0 (tricky conversion but not a good practice)
+console.log(+"")    // output ==> 0
+
+let gameCounter = 100
+++gameCounter;
+console.log(gameCounter);
