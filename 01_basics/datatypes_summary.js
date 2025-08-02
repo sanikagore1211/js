@@ -54,3 +54,27 @@ console.log(typeof myFunction); //function but also called as object function
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Memory types ==> 1) Stack(used in primitive type)  
+//                  2) Heap(used in non-primitive type)
+
+//1) Stack(used in primitive type)
+let myName = "sanikagore"
+let anotherName = myName
+anotherName = "sanikavijaygore"
+console.log(myName)
+console.log(anotherName)
+
+
+//2) Heap(used in non-primitive type)
+let userOne = {
+    email : "sanika@gmail.com",
+    upi : "sanika@pbl",
+}
+ 
+let userTwo = userOne
+userTwo.email = "sanikagore@gmail.com"
+console.log(userOne.email)
+console.log(userTwo.email)
