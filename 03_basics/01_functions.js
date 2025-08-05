@@ -51,3 +51,58 @@ function loginUserMessage(userName){    //function loginUserMessage(userName = "
 console.log(loginUserMessage("sanika")) // o/p ==> sanika just logged in
 console.log(loginUserMessage(""))       // o/p ==>  just logged in
 console.log(loginUserMessage())         // o/p ==> undefined just logged in
+
+
+//when we dont know about how many parameters user will pass
+
+// function calculateCartPrice(num1){
+//     return num1
+// }
+
+function calculateCartPrice(...num1){   //rest operator (...)
+    return num1
+}
+// ... is also known as rest operator and spread operator depending on use case 
+
+// console.log(calculateCartPrice(100))    // o/p ==> 100
+// console.log(calculateCartPrice(500, 250, 100))  // o/p ==> 500 
+
+//when we define function with 1 parameter and pass more than 1 arguments then it will take only 1 argument
+console.log(calculateCartPrice(500, 250, 100))  // o/p ==> [ 500, 250, 100 ]
+
+function calculateCartPrice2(val1, val2, ...num1){   //rest operator (...)
+    return num1
+}
+
+console.log(calculateCartPrice2(500, 250, 100, 2000))   // o/p ==> [ 100, 2000 ]
+
+//when i want to pass object to the function 
+
+const user = {
+    name: "sanika",
+     age: 22
+}
+
+function handleObject(anyobject){
+    console.log(`user name is ${anyobject.name} and age is ${anyobject.age}`)
+}
+// o/p ==> user name is sanika and age is 22
+// handleObject(user)
+
+//we can also pass object directly not need to define separtly
+
+handleObject({
+    name: "sam",
+     age: 66
+})
+// o/p ==> user name is sam and age is 66
+
+//we can also pass the array
+
+const myNewArray = [1, 2, 3, 4]
+function returnSecondValue(getArray){
+    return getArray[0]
+}
+
+// console.log(returnSecondValue(myNewArray))   // o/p ==> 1
+console.log(returnSecondValue([200, 300, 500])) // o/p ==> 200
